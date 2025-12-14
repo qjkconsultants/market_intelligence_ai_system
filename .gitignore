@@ -1,0 +1,88 @@
+# ======================
+# Python
+# ======================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+.poetry/
+.poetry-cache/
+pip-wheel-metadata/
+*.egg-info/
+dist/
+build/
+
+# ======================
+# Environment variables / secrets
+# ======================
+.env
+.env.*
+*.pem
+*.key
+*.crt
+*.p12
+
+# ======================
+# OS / Editor
+# ======================
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ======================
+# Logs
+# ======================
+*.log
+logs/
+
+# ======================
+# Data / AI / ML
+# ======================
+data/
+datasets/
+artifacts/
+models/
+vectors/
+embeddings/
+chroma/
+*.parquet
+*.csv
+*.jsonl
+
+# ======================
+# AWS / Terraform
+# ======================
+.terraform/
+terraform.tfstate
+terraform.tfstate.*
+*.tfvars
+.aws/
+
+# ======================
+# Docker
+# ======================
+*.tar
+docker-compose.override.yml
+
+# ======================
+# Test / Coverage
+# ======================
+.coverage
+htmlcov/
+pytest_cache/
+
+# ======================
+# Temporary / scratch
+# ======================
+tmp/
+temp/
+scratch/
+backup
+bak
+
+

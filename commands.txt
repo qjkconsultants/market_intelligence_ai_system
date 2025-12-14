@@ -1,0 +1,570 @@
+    1  cd /Volumns
+    2  cd /Volumes
+    3  l
+    4  ls
+    5  cd 'Macintosh HD'
+    6  ls
+    7  cd ../
+    8  l
+    9  ls
+   10  l
+   11  ls
+   12  mkdir old_macmini
+   13  cd old_macmini
+   14  pwd
+   15  cd
+   16  cd Documents
+   17  l
+   18  pwd
+   19  mkdir old_macmini
+   20  cd old_macmini
+   21  pwd
+   22  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)".
+   23  brew install python
+   24  echo >> /Users/qaisar/.zprofile
+   25  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/qaisar/.zprofile
+   26  eval "$(/opt/homebrew/bin/brew shellenv)"
+   27  brew install python
+   28  brew install pyenv
+   29  brew install docker
+   30  top
+   31  cd /Volumes/NO NAME
+   32  cd /Volumes/'NO NAME'
+   33  l
+   34  ls
+   35  cd MacMini
+   36  l
+   37  ls
+   38  cd Documents
+   39  ls
+   40  pwd
+   41  l
+   42  alias 'l=ls -ltra'
+   43  l
+   44  rsync -a PaymentsToAmmi /Users/qaisar/Documents/old_macmini/
+   45  rsync -a HomeLoan /Users/qaisar/Documents/old_macmini/
+   46  rsync -a DropBox /Users/qaisar/Documents/old_macmini/ 
+   47  rsync -a Resume /Users/qaisar/Documents/old_macmini/ 
+   48  l
+   49  rsync -a PersonalDetails /Users/qaisar/Documents/ 
+   50  cd HomeLoan
+   51  l
+   52  cd ../
+   53  l
+   54  rsync -a GitHub /Users/qaisar/Documents/old_macmini/ 
+   55  brew install iterm2
+   56  l
+   57  ls
+   58  cd Documents
+   59  l
+   60  alias 'l=ls -ltra'
+   61  l
+   62  cd PersonalDetails
+   63  l
+   64  cd IncomeProtection
+   65  l
+   66  l
+   67  ls
+   68  cd 
+   69  cd Documents
+   70  l
+   71  source ~/.zshrc
+   72  export alias 'l=ls -ltra'
+   73  l
+   74  alias 'l=ls -ltra'
+   75  l
+   76  cd old_macmini
+   77  l
+   78  cd Resume
+   79  l
+   80  cd 20250927_Resume
+   81  l
+   82  rsync -a DataEngineer/* ~/Documents/DataEngineering
+   83  cd /Volumes
+   84  ls
+   85  cd 'NO NAME
+   86  cd 'NO NAME'
+   87  ls
+   88  cd MacMini
+   89  ls
+   90  cd Documents
+   91  ls
+   92  rsync -a DropBox/KnowledgeBase ~/Documents
+   93  l
+   94  pwd
+   95  touch .env
+   96  pyto
+   97  python3 
+   98  python3 ./llm_assisted_coding.py
+   99  poetry init
+  100  pip install poetry
+  101  pip3
+  102  pip3 install poetry
+  103  vim installations.txt
+  104  cat ./installations.txt
+  105  curl -sSL https://install.python-poetry.org | python3 -
+  106  poetry init
+  107  echo 'export PATH="/Users/qaisar/.local/bin:$PATH"' >> ~/.zshrc
+  108  source ~/.zshrc
+  109  poetry --version
+  110  poetry init
+  111  poetry install
+  112  python3 --version
+  113  poetry install
+  114  poetry shell
+  115  python ./llm_assisted_coding.py
+  116  poetry shell
+  117  poetry env activate\n
+  118  source /Users/qaisar/Library/Caches/pypoetry/virtualenvs/coding-qWnx6VLA-py3.14/bin/activate
+  119  cat >> commands.txt
+  120  history 1000 | sort | uniq > commands.txt
+  121  history -1000 | sort | uniq > commands.txt
+  122  l
+  123  python ./llm_assisted_coding.py
+  124  poetry env remove python
+  125  python3 --version
+  126  poetry env use python3.12
+  127  deactivate
+  128  python --version
+  129  python version
+  130  python3 --version
+  131  poetry env remove python
+  132  poetry env use /opt/homebrew/bin/python3.12
+  133  poetry install
+  134  touch /Users/qaisar/Documents/Udacity/coding/README.md
+  135  source /Users/qaisar/Library/Caches/pypoetry/virtualenvs/coding-qWnx6VLA-py3.12
+  136  source /Users/qaisar/Library/Caches/pypoetry/virtualenvs/coding-qWnx6VLA-py3.12/bin/activate
+  137  poetry install
+  138  poetry init
+  139  mkdir courseOne
+  140  cd ./courseOne/
+  141  touch __init__.py
+  142  cp ../llm_assisted_coding.py .
+  143  cd ..
+  144  l
+  145  vim ~/.zshrc
+  146  source ~/.zshrc
+  147  l
+  148  mv ./llm_assisted_coding.py ./courseOne/
+  149  l
+  150  cd ./courseOne/
+  151  l
+  152  poetry init
+  153  poetry add llmlite
+  154  python 
+  155  cd ../
+  156  l
+  157  rm -rf ./poetry.lock ./pyproject.toml
+  158  l
+  159  mv ./README.md ./courseOne/
+  160  l
+  161  cd ./courseOne/
+  162  l
+  163  poetry add llmlite
+  164  pytho
+  165  python3 ./llm_assisted_coding.py
+  166  pip install --upgrade pydantic
+  167  python3 ./llm_assisted_coding.py
+  168  pip install --upgrade pydantic
+  169  python3 ./llm_assisted_coding.py
+  170  touch llm-assisted-merge-sort-starter.py
+  171  cd ../
+  172  git clone https://github.com/udacity/cd13303-genai-c1-classroom.git
+  173  l
+  174  cd ./courseOne/
+  175  l
+  176  cd llm-assisted-merge-sort-starter.py
+  177  python ./llm-assisted-merge-sort-starter.py
+  178  python ./llm-assisted-merge-sort-starter.py
+  179  ls
+  180  python ./llm-assisted-merge-sort-starter.py
+  181  cd ~/Documents
+  182  ls
+  183  l
+  184  cd old_macmini
+  185  ls
+  186  cd /Volumes
+  187  ls
+  188  cd 
+  189  cd ~/Documents
+  190  ls
+  191  cd old_macmini
+  192  l
+  193  ls
+  194  cd Resume
+  195  ls
+  196  alias 'l=ls -ltra'
+  197  l
+  198  cd 20250927_Resume
+  199  l
+  200  cd AI_Engineer
+  201  l
+  202  cd Udacity
+  203  l
+  204  cd LangChain_LangGraph
+  205  l
+  206  cd ../../
+  207  l
+  208  cdcd Snug_Proof_Of_Concept
+  209  l
+  210  cd Udacity
+  211  l
+  212  cd LangChain_LangGraph
+  213  l
+  214  cd ../
+  215  pwd
+  216  cd ../
+  217  l
+  218  cd Snug_Proof_Of_Concept
+  219  l
+  220  cd snug-rental-ai
+  221  l
+  222  cat .env
+  223  brew install python@3.12
+  224  /opt/homebrew/bin/python3.12 --version
+  225  cd /Volumes
+  226  l
+  227  cd /Volumes
+  228  l
+  229  cd ./courseOne/
+  230  poetry shell
+  231  poetry env activate
+  232  l
+  233  cd ../
+  234  l
+  235  cd ./courseOne/
+  236  l
+  237  history -10000 >> ../commands.txt
+  238  poetry env use /opt/homebrew/bin/python3.12
+  239  source /Users/qaisar/Library/Caches/pypoetry/virtualenvs/courseone-DUfPmASi-py3.12/bin/activate
+  240  vim virtual_env.txt
+  241  l
+  242  python ./llm-assisted-merge-sort-starter.py
+  243  l
+  244  python ./llm_assisted_coding.py
+  245  cd ../
+  246  python ./llm_assisted_coding.py
+  247  cd ./courseOne/
+  248  l
+  249  poetry install
+  250  touch __init__.py
+  251  poetry install
+  252  poetry install
+  253  poetry install
+  254  poetry add llmlite
+  255  poetry add litellm\npoetry add langchain\npoetry add fastapi\npoetry add pydantic
+  256  l
+  257  python ./llm-assisted-merge-sort-starter.py
+  258  l
+  259  l
+  260  cd 'Qaisar Data'
+  261  l
+  262  ls
+  263  ls
+  264  pwd
+  265  cd ../
+  266  l
+  267  cd /Volumes
+  268  l
+  269  l
+  270  ls -ltr
+  271  cd 'No Name'
+  272  ls
+  273  l
+  274  l
+  275  l
+  276  diskutil list
+  277  ls
+  278  cd ./courseOne/
+  279  l
+  280  mkdir module-1
+  281  mv *py ./module-1/
+  282  l
+  283  mkdir module-5
+  284  mv ./module-1 ./module-3
+  285  l
+  286  cd ./module-3/
+  287  cd ../
+  288  l
+  289  cd ./module-5
+  290  l
+  291  touch sentiment_classifier.py
+  292  python ./sentiment_classifier.py
+  293  source /Users/qaisar/Library/Caches/pypoetry/virtualenvs/coding-qWnx6VLA-py3.12/bin/activate
+  294  python ./sentiment_classifier.py
+  295  python ./sentiment_classifier.py
+  296  python ./sentiment_classifier.py
+  297  python ./sentiment_classifier.py
+  298  python ./sentiment_classifier.py
+  299  python ./sentiment_classifier.py
+  300  python ./sentiment_classifier.py
+  301  python ./sentiment_classifier.py
+  302  l
+  303  cp spam_classifier.py
+  304  cp ./sentiment_classifier.py spam_classifier.py
+  305  python ./spam_classifier.py
+  306  poetry add datasets
+  307  python ./spam_classifier.py
+  308  poetry install
+  309  pip install datasets
+  310  python ./spam_classifier.py
+  311  python ./spam_classifier.py
+  312  python ./spam_classifier.py
+  313  python ./spam_classifier.py
+  314  python ./spam_classifier.py
+  315  cd ../
+  316  mkdir module6
+  317  diskutil list
+  318  diskutil list
+  319  cd /Volumes
+  320  l
+  321  cd 'NO NAME'
+  322  l
+  323  cd BROTHER
+  324  l
+  325  open .
+  326  cd Documents
+  327  l
+  328  rsync -a /Volumes/NO\ NAME/MacMini/Documents/HomeLoan .
+  329  rsync -a /Volumes/NO\ NAME/MacMini/Documents/PaymentsToAmmi .
+  330  rsync -a /Volumes/NO\ NAME/MacMini/Documents/I* .
+  331  rsync -a /Volumes/NO\ NAME/MacMini/Documents/GitHub .
+  332  cd module8
+  333  l
+  334  cat ../commands.txt
+  335  source /Users/qaisar/Library/Caches/pypoetry/virtualenvs/coding-qWnx6VLA-py3.12/bin/activate
+  336  source /Users/qaisar/Library/Caches/pypoetry/virtualenvs/coding-qWnx6VLA-py3.12/bin/activate
+  337  poetry shell
+  338  poetry env use /opt/homebrew/bin/python3.12
+  339  source /Users/qaisar/Library/Caches/pypoetry/virtualenvs/courseone-DUfPmASi-py3.12/bin/activate
+  340  history
+  341  python -m pip install ipykernel\npython -m ipykernel install --user --name venv1 --display-name "Python (venv1)"\n
+  342  python -m pip install ipykernel
+  343  python -m ipykernel install --user --name courseone-py3.12 --display-name "Python (venv1)"
+  344  history
+  345  jupyter notebook
+  346  jupyter lab
+  347  uv pip install jupyterlab ipykernel
+  348  jupyter --version
+  349  jupyter lab
+  350  pwd
+  351  cd module8
+  352  pwd
+  353  l
+  354  cd ../
+  355  l
+  356  cd cd13303-genai-c1-classroom/module-8-implementing-evaluations-for-generative-ai-models
+  357  jupyter lab
+  358  uv pip install litellm
+  359  jupyter lab
+  360  uv pip install numpy
+  361  jupyter lab
+  362  uv pip install pandas
+  363  jupyter lab
+  364  pwd
+  365  uv pip install evaluate
+  366  jupyter lab
+  367  uv pip install sentence_transformers
+  368  jupyter lab
+  369  uv pip install --upgrade jupyterlab ipywidgets
+  370  jupyter labextension list
+  371  jupyter lab
+  372  uv pip install nltk absl-py rouge-score\n
+  373  jupyter lab
+  374  history -500 >> ../../commands.txt
+  375  jupyter lab
+  376  cd ../
+  377  cd module-10-implementing-neural-networks-using-pytorch
+  378  ls
+  379  cd demo-intro-pytorch
+  380  ls
+  381  jupyter lab
+  382  uv pip install matplotlib\n
+  383  jupyter lab
+  384  mkdir document_ingestion
+  385  cd ./document_ingestion/
+  386  mkdir -p infra/modules/{vpc,kms,s3_docs,ecs_cluster,ecr,iam,cloudwatch_logs,security_groups} \\n         infra/envs/dev\n
+  387  l
+  388  cd ./infra/
+  389  l
+  390  touch versions.tf
+  391  cd ./envs/
+  392  l
+  393  cd ./dev/
+  394  l
+  395  touch main.tf
+  396  touch variables.tf
+  397  touch terraform.tfvars
+  398  touch outputs.tf
+  399  cd ../
+  400  l
+  401  cd ../
+  402  l
+  403  cd ./modules/
+  404  l
+  405  cd ./vpc/
+  406  touch variables.tf
+  407  touch main.tf
+  408  touch outputs.tf
+  409  cd ../
+  410  l
+  411  cd ./kms/
+  412  l
+  413  touch main.tf
+  414  touch outputs.tf
+  415  cd ../
+  416  l
+  417  cd ./s3_docs/
+  418  l
+  419  touch variables.tf
+  420  touch main.tf
+  421  touch policy.tf
+  422  touch outputs.tf
+  423  cd ../
+  424  l
+  425  cd ./ecr/
+  426  l
+  427  touch variables.tf
+  428  touch main.tf
+  429  touch outputs.tf
+  430  cd ../
+  431  cd ./cloudwatch_logs/
+  432  l
+  433  touch variables.tf
+  434  touch main.tf
+  435  touch outputs.tf
+  436  cd ../
+  437  l
+  438  cd ./iam/
+  439  touch variables.tf
+  440  touch main.tf outputs.tf
+  441  cd ../
+  442  cd ./ecs_cluster/
+  443  l
+  444  touch main.tf outputs.tf variables.tf
+  445  cd ../security_groups/
+  446  touch main.tf outputs.tf variables.tf
+  447  l
+  448  cd ./document_ingestion/
+  449  l
+  450  cd ./infra/
+  451  l
+  452  cd ./modules/
+  453  l
+  454  cd ./kms/
+  455  touch variables.tf
+  456  aws sts get-caller-identity\n
+  457  cd ../
+  458  l
+  459  cd ../
+  460  l
+  461  cd ../
+  462  l
+  463  mkdir docs
+  464  cd ./docs/
+  465  vim teraform_gist.txt
+  466  cd ../
+  467  l
+  468  cd ../
+  469  l
+  470  cd ./document_ingestion/
+  471  l
+  472  cd ./services/
+  473  mv ../../services/* .
+  474  l
+  475  cd ./api/
+  476  l
+  477  cd ../
+  478  l
+  479  cd ../
+  480  l
+  481  cd ./scripts/
+  482  l
+  483  mv ../../scripts/* .
+  484  l
+  485  cd ../
+  486  l
+  487  cd ./observability/
+  488  mv ../../observability/* .
+  489  l
+  490  cd ../
+  491  l
+  492  cd ../
+  493  l
+  494  rm -rf ./services/ ./scripts/ ./observability/
+  495  cd ./document_ingestion/
+  496  l
+  497  vim ./docker-compose.yml
+  498  cd ../
+  499  l
+  500  rm -rf ./docker-compose.yml
+  501  mv ./README.md ./document_ingestion/
+  502  l
+  503  cd ./document_ingestion/
+  504  l
+  505  docker compose down
+  506  docker compose up --build
+  507  docker compose down
+  508  docker compose up --build
+  509  docker compose down
+  510  docker compose down -d
+  511  docker compose up -d --build
+  512  docker compose down
+  513  docker compose down
+  514  ^[[200~docker compose up -d
+  515  docker compose down
+  516  docker compose up -d --build
+  517  docker compose down
+  518  l
+  519  cd ../
+  520  l
+  521  rsync -a ~/Downloads/doc-ingestion-scaffold-v2.zip .
+  522  l
+  523  unzip ./doc-ingestion-scaffold-v2.zip
+  524  cd ../
+  525  cd -
+  526  cd ./document_ingestion/
+  527  l
+  528  rm -rf ./services/ ./scripts/ ./observability/ ./docker-compose.yml 
+  529  l
+  530  cd ../
+  531  l
+  532  unzip ./doc-ingestion-scaffold-v2.zip
+  533  l
+  534  cd ./document_ingestion/
+  535  mv ../services .
+  536  mv ../scripts .
+  537  mv ../observability .
+  538  mv ../docker-compose.yml .
+  539  mv ../README.md .
+  540  l
+  541  cd ../
+  542  l
+  543  rm -rf ./doc-ingestion-scaffold-v2.zip
+  544  l
+  545  mkdir  backup
+  546  mv ./document_ingestion.20251214.bak ./backup/
+  547  l
+  548  cd ./document_ingestion/
+  549  l
+  550  docker compose up -d --build
+  551  python scripts/create_ddb_table_local.py
+  552  python3 ./scripts/create_ddb_table_local.py
+  553  uv --version
+  554  uv venv
+  555  source .venv/bin/activate
+  556  uv pip install boto3
+  557  python scripts/create_ddb_table_local.py\n
+  558  uv pip freeze > requirements.local.txt
+  559  docker ps
+  560  docker ps -a
+  561  docker compose down
+  562  docker compose build api
+  563  docker compose up api
+  564  docker compose build api
+  565  docker compose up api
+  566  docker compose build api\n
+  567  docker compose up api
+  568  docker compose build api\n
+  569  docker compose up api
+  570  history 1000 >> commands.txt
