@@ -85,4 +85,8 @@ scratch/
 backup
 bak
 
+.terraform/
+.terraform/
+terraform.tfstate
+terraform.tfstate.*
 
