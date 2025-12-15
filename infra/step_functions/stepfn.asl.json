@@ -1,0 +1,59 @@
+{
+  "StartAt": "MarkProcessing",
+  "States": {
+    "MarkProcessing": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::dynamodb:updateItem",
+      "Parameters": {
+        "TableName": "${DDB_TABLE_NAME}",
+        "Key": {
+          "PK": { "S.$": "States.Format('TENANT#{}', $.tenant_id)" },
+          "SK": { "S.$": "States.Format('UPLOAD#{}', $.upload_id)" }
+        },
+        "UpdateExpression": "SET #st = :p",
+        "ExpressionAttributeNames": {
+          "#st": "status"
+        },
+        "ExpressionAttributeValues": {
+          ":p": { "S": "PROCESSING" }
+        }
+      },
+      "Next": "MockExtract"
+    },
+
+    "MockExtract": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "${MOCK_EXTRACT_LAMBDA_ARN}",
+        "Payload.$": "$"
+      },
+      "ResultSelector": {
+        "extraction_output_key.$": "$.Payload.extraction_output_key"
+      },
+      "ResultPath": "$.extraction",
+      "Next": "MarkComplete"
+    },
+
+    "MarkComplete": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::dynamodb:updateItem",
+      "Parameters": {
+        "TableName": "${DDB_TABLE_NAME}",
+        "Key": {
+          "PK": { "S.$": "States.Format('TENANT#{}', $.tenant_id)" },
+          "SK": { "S.$": "States.Format('UPLOAD#{}', $.upload_id)" }
+        },
+        "UpdateExpression": "SET #st = :c, extraction_output_key = :k",
+        "ExpressionAttributeNames": {
+          "#st": "status"
+        },
+        "ExpressionAttributeValues": {
+          ":c": { "S": "COMPLETE" },
+          ":k": { "S.$": "$.extraction.extraction_output_key" }
+        }
+      },
+      "End": true
+    }
+  }
+}

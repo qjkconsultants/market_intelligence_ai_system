@@ -1,0 +1,57 @@
+export AWS_ACCESS_KEY_ID=local
+export AWS_SECRET_ACCESS_KEY=local
+export AWS_DEFAULT_REGION=ap-southeast-2
+
+qaisar@Mac document_ingestion % source .venv/bin/activate
+(document_ingestion) qaisar@Mac document_ingestion % python scripts/create_ddb_table_local.py 
+Creating table...
+Created table DocumentIngestion
+(document_ingestion) qaisar@Mac document_ingestion % aws dynamodb list-tables --endpoint-url http://localhost:8000 --region ap-southeast-2
+{
+    "TableNames": [
+        "DocumentIngestion"
+    ]
+}
+(document_ingestion) qaisar@Mac document_ingestion % curl http://localhost:8080/health
+{"status":"ok","service":"doc-ingestion-api","env":"local"}%                                                                                                   
+(document_ingestion) qaisar@Mac document_ingestion % ./upload_document.sh ./input_docs/PrincipalEngineerAI.docx.pdf
+📄 Document:
+  Path : ./input_docs/PrincipalEngineerAI.docx.pdf
+  Name : PrincipalEngineerAI.docx.pdf
+  Size : 238045 bytes
+
+➡️  Initiating upload...
+{
+  "upload_id": "f1d4ded2-1ed5-4046-86e3-43ab32d7dc7b",
+  "object_key": "tenant=tenant-finance/domain=accounts/upload_id=f1d4ded2-1ed5-4046-86e3-43ab32d7dc7b/PrincipalEngineerAI.docx.pdf",
+  "bucket": "docs",
+  "presigned_url": "http://localhost:9000/docs/tenant%3Dtenant-finance/domain%3Daccounts/upload_id%3Df1d4ded2-1ed5-4046-86e3-43ab32d7dc7b/PrincipalEngineerAI.docx.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minioadmin%2F20251214%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20251214T233357Z&X-Amz-Expires=900&X-Amz-SignedHeaders=host&X-Amz-Signature=7737bea4c3721c4bcc86251e814c66cfd8a8693b34c57fb8844bf100fd40ee9a",
+  "expires_in_seconds": 900
+}
+
+Upload ID: f1d4ded2-1ed5-4046-86e3-43ab32d7dc7b
+
+⬆️  Uploading document to object storage...
+
+(document_ingestion) qaisar@Mac document_ingestion % curl -X POST http://localhost:8080/v1/uploads/complete \
+  -H "Content-Type: application/json" \
+  -H "x-request-id: test-123" \
+  -H "x-tenant-id: tenant-finance" \
+  -d '{
+    "tenant_id": "tenant-finance",
+    "upload_id": "f1d4ded2-1ed5-4046-86e3-43ab32d7dc7b"
+  }'
+
+{"status":"queued","upload_id":"f1d4ded2-1ed5-4046-86e3-43ab32d7dc7b","workflow_execution_arn":null}%                                                          
+
+
+=================
+
+curl -X POST http://localhost:8080/v1/uploads/complete \
+  -H "Content-Type: application/json" \
+  -H "x-tenant-id: tenant-finance" \
+  -H "x-request-id: test-456" \
+  -d '{
+    "tenant_id": "tenant-finance",
+    "upload_id": "f1d4ded2-1ed5-4046-86e3-43ab32d7dc7b"
+  }'

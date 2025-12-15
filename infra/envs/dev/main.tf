@@ -1,6 +1,8 @@
 provider "aws" {
-  region = var.aws_region
+  profile = "terraform"
+  region  = "ap-southeast-2"
 }
+
 
 module "vpc" {
   source             = "../../modules/vpc"
@@ -63,4 +65,13 @@ module "iam" {
 
   docs_bucket_arn = module.s3_docs.bucket_arn
   kms_key_arn     = module.kms.kms_key_arn
+}
+
+module "step_functions" {
+  source = "../../step_functions"
+
+  project_name     = var.project_name
+  environment      = var.environment
+  ddb_table_name = var.ddb_table_name
+  docs_bucket_name = module.s3_docs.bucket_name
 }

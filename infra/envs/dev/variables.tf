@@ -10,3 +10,7 @@ variable "public_subnets"     { type = list(string) }
 variable "private_subnets"    { type = list(string) }
 
 variable "log_retention_days" { type = number }
+variable "ddb_table_name" {
+  type        = string
+  description = "DynamoDB table name for document ingestion metadata"
+}

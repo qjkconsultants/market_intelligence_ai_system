@@ -4,11 +4,12 @@ from botocore.config import Config
 from .settings import settings
 
 def dynamodb_resource():
-    session = boto3.session.Session(region_name=settings.aws_region)
-    return session.resource(
+    return boto3.resource(
         "dynamodb",
-        endpoint_url=settings.ddb_endpoint_url,
-        config=Config(retries={"max_attempts": 10, "mode": "standard"})
+        region_name=settings.aws_region,
+        endpoint_url=settings.ddb_endpoint_url,  # 🔑 REQUIRED
+        aws_access_key_id="local",
+        aws_secret_access_key="local",
     )
 
 def s3_client():

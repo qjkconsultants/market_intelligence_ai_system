@@ -61,7 +61,7 @@ services:
 
       # ---- Step Functions (disabled locally) ----
       ENABLE_STEP_FUNCTIONS: "false"
-      STEP_FUNCTION_ARN: ""
+      STEP_FUNCTION_ARN: "arn:aws:states:ap-southeast-2:067614922044:stateMachine:doc-ingestion-dev-ingestion-v1"
 
       # ---- Observability (DISABLED) ----
       OTEL_TRACES_EXPORTER: none

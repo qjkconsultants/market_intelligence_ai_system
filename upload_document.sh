@@ -78,6 +78,29 @@ echo ""
 # =========================
 # STEP 2: UPLOAD TO S3 / MINIO
 # =========================
-echo "⬆️  Uploading document to object storage..."
+curl -s -X PUT "$PRESIGNED_URL" \
+  -H "Content-Type: $CONTENT_TYPE" \
+  --upload-file "$FILE_PATH"
 
-curl -s -X PUT "$PRESIGNED_URL" \_
+echo "✅ Upload completed"
+echo ""
+
+# =========================
+# STEP 3: COMPLETE UPLOAD
+# =========================
+echo "➡️  Marking upload as complete..."
+
+COMPLETE_RESPONSE=$(curl -s -X POST "$API_BASE_URL/v1/uploads/complete" \
+  -H "Content-Type: application/json" \
+  -H "x-request-id: $REQUEST_ID_COMPLETE" \
+  -H "x-tenant-id: $TENANT_HEADER" \
+  -d "{
+    \"tenant_id\": \"$TENANT_ID\",
+    \"upload_id\": \"$UPLOAD_ID\"
+  }")
+
+echo "$COMPLETE_RESPONSE" | jq .
+
+echo ""
+echo "🎉 Document ingestion flow completed"
+

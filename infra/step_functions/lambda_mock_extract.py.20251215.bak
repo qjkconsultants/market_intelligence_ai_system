@@ -1,0 +1,72 @@
+import json
+import os
+import boto3
+from datetime import datetime
+
+# AWS clients
+textract = boto3.client("textract")
+dynamodb = boto3.resource("dynamodb")
+
+TABLE_NAME = os.environ["DDB_TABLE_NAME"]
+
+def handler(event, context):
+    """
+    Step Functions → Textract starter Lambda
+
+    Input (from Step Functions):
+    {
+      "tenant_id": "...",
+      "upload_id": "...",
+      "bucket": "...",
+      "object_key": "...",
+      "trace_id": "...",
+      "request_id": "..."
+    }
+    """
+
+    tenant_id = event["tenant_id"]
+    upload_id = event["upload_id"]
+    bucket = event["bucket"]
+    object_key = event["object_key"]
+
+    # 1️⃣ Start Textract (async)
+    response = textract.start_document_text_detection(
+        DocumentLocation={
+            "S3Object": {
+                "Bucket": bucket,
+                "Name": object_key
+            }
+        }
+    )
+
+    job_id = response["JobId"]
+
+    # 2️⃣ Persist Textract JobId in DynamoDB (source of truth)
+    table = dynamodb.Table(TABLE_NAME)
+
+    table.update_item(
+        Key={
+            "tenant_id": tenant_id,
+            "upload_id": upload_id,
+        },
+        UpdateExpression="""
+            SET
+              processing_status = :status,
+              textract_job_id = :job_id,
+              textract_started_at = :started_at
+        """,
+        ExpressionAttributeValues={
+            ":status": "TEXTRACT_RUNNING",
+            ":job_id": job_id,
+            ":started_at": datetime.utcnow().isoformat(),
+        },
+    )
+
+    # 3️⃣ Return minimal state to Step Functions
+    return {
+        "tenant_id": tenant_id,
+        "upload_id": upload_id,
+        "textract_job_id": job_id,
+        "bucket": bucket,
+        "object_key": object_key,
+    }

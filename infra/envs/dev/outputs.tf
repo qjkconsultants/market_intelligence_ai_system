@@ -10,3 +10,6 @@ output "ecs_execution_role_arn" { value = module.iam.ecs_task_execution_role_arn
 
 output "alb_sg_id" { value = module.security_groups.alb_sg_id }
 output "ecs_sg_id" { value = module.security_groups.ecs_tasks_sg_id }
+output "step_function_arn" {
+  value = module.step_functions.step_function_arn
+}
